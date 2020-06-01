@@ -106,3 +106,4 @@ dist
 #Node Modules
 node_modules/
 .DS_Store
+.vscode
