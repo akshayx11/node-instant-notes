@@ -4,11 +4,12 @@ const express = require('express');
 const router = express.Router();
 const now = Date.now();
 router.get('/', (req, res, next) => {
-    fs.readFile('./usersData/userData.json', '', (err, data) => {
+    res.send("Hello World");
+    /* fs.readFile('./usersData/userData.json', '', (err, data) => {
         if (err) throw err;
         const jsonData = JSON.parse(data);
         res.send(jsonData);
-    });
+    }); */
 });
 router.post('/', (req, res, next) => {
     try {
