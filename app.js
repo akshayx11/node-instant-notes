@@ -14,6 +14,6 @@ app.get('/test', (req, res) => {
         test: "Test Successful"
     });
 });
-app.listen(process.env.port || 3000, (req, res) => {
+app.listen(process.env.PORT || 3000, (req, res) => {
     console.log("Server running!!");
 });
