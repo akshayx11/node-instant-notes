@@ -9,7 +9,11 @@ app.use(bodyParser.urlencoded({
 }));
 const toRouters = require('./textOperations');
 app.use('/', toRouters);
-
+app.get('/test', (req, res) => {
+    res.send({
+        test: "Test Successful"
+    });
+});
 app.listen(process.env.port || 3000, (req, res) => {
     console.log("Server running!!");
 });
