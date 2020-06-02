@@ -4,7 +4,9 @@ const express = require('express');
 const router = express.Router();
 const now = Date.now();
 router.get('/', (req, res, next) => {
-    res.send("Hello World");
+    res.send({
+        meg: "Hello World"
+    });
     /* fs.readFile('./usersData/userData.json', '', (err, data) => {
         if (err) throw err;
         const jsonData = JSON.parse(data);
