@@ -2,7 +2,6 @@ const fs = require('fs');
 const express = require('express');
 
 const router = express.Router();
-const now = Date.now();
 router.get('/', (req, res, next) => {
     fs.readFile('./usersData/userData.json', '', (err, data) => {
         if (err) throw err;
@@ -20,6 +19,7 @@ router.post('/', (req, res, next) => {
                 error: "No content Adeed"
             });
         }
+        const now = Date.now();
         const formattedContent = {
             content: `<pre>${content}</pre>`,
             addedDate: now
@@ -46,6 +46,7 @@ router.put("/:textId", (req, res, next) => {
         const {
             content
         } = req.body;
+        const now = Date.now();
         const formattedContent = {
             content,
             updatedDate: now
